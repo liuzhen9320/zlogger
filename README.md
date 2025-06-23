@@ -11,7 +11,7 @@ A lightweight, configurable Rust logging library with color support and file rot
 - ⚡ **Thread-safe logging**
 - 🪶 **Minimal dependencies**
 
-## Quick Start
+## ▶️ Quick Start
 
 Add this to your `Cargo.toml`:
 
@@ -28,25 +28,25 @@ use zlogger::{init, info, warn, error};
 fn main() {
     // Initialize with default settings
     init();
-    
+
     info!("Application started");
     warn!("This is a warning");
     error!("Something went wrong");
 }
 ```
 
-## Configuration
+## ⚙️ Configuration
 
 ### Environment Variables
 
-| Variable | Description | Default | Example |
-|----------|-------------|---------|---------|
-| `ZLOG_LEVEL` | Minimum log level | `info` | `debug` |
-| `ZLOG_OUTPUT` | Output target | `console` | `file`, `both` |
-| `ZLOG_FILE` | Log file path | `app.log` | `/var/log/myapp.log` |
-| `ZLOG_MAX_SIZE` | Max file size (bytes) | `10485760` (10MB) | `1048576` (1MB) |
-| `ZLOG_MAX_FILES` | Max rotated files | `5` | `10` |
-| `ZLOG_COLOR` | Enable colors | `true` | `false` |
+| Variable         | Description           | Default           | Example              |
+| ---------------- | --------------------- | ----------------- | -------------------- |
+| `ZLOG_LEVEL`     | Minimum log level     | `info`            | `debug`              |
+| `ZLOG_OUTPUT`    | Output target         | `console`         | `file`, `both`       |
+| `ZLOG_FILE`      | Log file path         | `app.log`         | `/var/log/myapp.log` |
+| `ZLOG_MAX_SIZE`  | Max file size (bytes) | `10485760` (10MB) | `1048576` (1MB)      |
+| `ZLOG_MAX_FILES` | Max rotated files     | `5`               | `10`                 |
+| `ZLOG_COLOR`     | Enable colors         | `true`            | `false`              |
 
 ### Programmatic Configuration
 
@@ -64,24 +64,25 @@ let config = Config::default()
 init_with_config(config);
 ```
 
-## Log Levels
+## 🔍 Log Levels
 
-- `trace` - Very detailed debug information
-- `debug` - Debug information
-- `info` - General information
-- `warn` - Warning messages
-- `error` - Error messages
+- 🔍 **`trace`** - Very detailed debug information
+- 🛠️ **`debug`** - Debug information
+- 📢 **`info`** - General information
+- ⚠️ **`warn`** - Warning messages
+- ❌ **`error`** - Error messages
 
-## File Rotation
+## 🔄 File Rotation
 
 When a log file reaches the maximum size, it's automatically rotated:
+
 - `app.log` → `app.log.1`
 - `app.log.1` → `app.log.2`
 - etc.
 
-Old files beyond the maximum count are automatically deleted.
+🗑️ Old files beyond the maximum count are automatically deleted.
 
-## Examples
+## 🏃♂️ Examples
 
 Run the basic example:
 
@@ -89,11 +90,11 @@ Run the basic example:
 cargo run --example basic_usage
 ```
 
-## License
+## 📜 License
 
 Licensed under MIT license.
 
-## Credits
+## 👥 Credits
 
 - [@liuzhen9320](https://github.com/liuzhen9320) - Project author
 - All contributors to the `rust-lang` ecosystem who have made this project possible
