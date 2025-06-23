@@ -1,0 +1,19 @@
+[package]
+name = "zlogger"
+version = "0.0.1"
+edition = "2021"
+authors = ["Liu Zhen <liuzhen9320@5.1.e.7.0.a.a.e.0.a.2.ip6.arpa>"]
+license = "MIT"
+description = "A lightweight, configurable Rust logging library with color support and file rotation"
+repository = "https://github.com/liuzhen9320/zlogger"
+homepage = "https://github.com/liuzhen9320/zlogger"
+documentation = "https://docs.rs/zlogger"
+keywords = ["logging", "color", "rotation", "environment"]
+categories = ["development-tools::debugging"]
+readme = "README.md"
+
+[dependencies]
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+
+[dev-dependencies]
+tempfile = "3.0"
